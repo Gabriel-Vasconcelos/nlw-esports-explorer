@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(./assets/fundo.jpg);
+    background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-color: #121214;
+}
+
+ul{
+    list-style: none;
+}
+
+.header-image{
+    height: calc(140px);
+
+    margin-top: 32px;
+    
+    display: flex;
+    justify-content: center;
+}
+
+.header-image div{
+    display: flex;
+
+    width: 140px;
+    
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    
+    border-radius: 50%;
+
+    padding: 4px;
+
+    transition: transform .2s;
+}
+
+.header-image div:hover{
+    transform: scale(1.1);
+}
+
+.header-image img{
+    width: 100%;
+
+    border-radius: 50%;
+}
+
+.container{
+    max-width: 600px;
+    width: 90%;
+    
+    margin: 32px auto;
+}
+
+.section-main{
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    
+    border-radius: 10px;
+
+    padding-top: 6px;
+
+    color: #eee;
+
+    margin-bottom: 24px;
+}
+
+.section-main div{
+    background-color: #2A2634;
+    
+    border-radius: 8px;
+
+    padding: 32px;
+    padding-top: 24px;
+}
+
+.description-section{
+    color: #A1A1AA;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    margin-top: 24px;
+}
+
+.game-list img{
+    width: 120px;
+    
+    border-radius: 8px;
+    border: 2px solid #443E54;
+
+    transition: transform .3s;
+}
+
+.game-list img:hover{
+    transform: scale(1.1);
+}
+
+.channel-list img{
+    width: 90px;
+
+    border-radius: 50%;
+    border: 2px solid #443E54;
+
+    transition: transform .3s;
+}
+
+.channel-list img:hover{
+    transform: scale(1.1);
+}
+
+.networks-list svg{
+    transition: transform .3s;
+}
+
+.networks-list svg:hover{
+    transform: scale(1.2);
+}
+
+/* ANIMATIONS */
+
+.header-image div{
+    animation: fromTop 1s .4s backwards;
+}
+
+.section-main:nth-child(1){
+    animation: fromBottom 1s .1s backwards; 
+}
+
+.section-main:nth-child(2){
+    animation: fromBottom 1s .4s backwards; 
+}
+
+.section-main:nth-child(3){
+    animation: fromBottom 1s .7s backwards; 
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+
+        transform: translateY(-30px)
+    }
+
+    top{
+        opacity: 1;
+
+        transform: translateY(0)
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+
+        transform: translateX(-30px);
+    }
+
+    top{
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+}
